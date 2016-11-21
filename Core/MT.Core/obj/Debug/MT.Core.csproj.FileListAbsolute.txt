@@ -1,0 +1,4 @@
+E:\Work\NET\MVC\Project\MT.Core\MT.Core\bin\Debug\MT.Core.dll
+E:\Work\NET\MVC\Project\MT.Core\MT.Core\bin\Debug\MT.Core.pdb
+E:\Work\NET\MVC\Project\MT.Core\MT.Core\obj\Debug\MT.Core.dll
+E:\Work\NET\MVC\Project\MT.Core\MT.Core\obj\Debug\MT.Core.pdb
