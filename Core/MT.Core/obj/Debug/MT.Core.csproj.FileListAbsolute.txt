@@ -6,3 +6,4 @@ E:\Work\NET\MVC\Project\MT_Core\Core\MT.Core\bin\Debug\MT.Core.dll
 E:\Work\NET\MVC\Project\MT_Core\Core\MT.Core\bin\Debug\MT.Core.pdb
 E:\Work\NET\MVC\Project\MT_Core\Core\MT.Core\obj\Debug\MT.Core.dll
 E:\Work\NET\MVC\Project\MT_Core\Core\MT.Core\obj\Debug\MT.Core.pdb
+E:\Work\NET\MVC\Project\MT_Core\Core\MT.Core\obj\Debug\MT.Core.csprojResolveAssemblyReference.cache
