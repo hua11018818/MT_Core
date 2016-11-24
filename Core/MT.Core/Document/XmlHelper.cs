@@ -40,10 +40,7 @@ namespace MT.Core.Document
         /// <param name="xElement">节点</param>
         /// <param name="singleName">子节点名称</param>
         /// <returns></returns>
-        public static bool HasElementBySingleName(XElement xElement, string singleName)
-        {
-            return null != GetElementBySingleName(xElement, singleName);
-        }
+        public static bool HasElementBySingleName(XElement xElement, string singleName) => null != GetElementBySingleName(xElement, singleName);
 
         /// <summary>
         /// 判断节点是否包含某个属性
@@ -53,24 +50,11 @@ namespace MT.Core.Document
         /// <returns></returns>
         public static bool HasAttributeByName(XElement xElement, string attributeName)
         {
-            if (xElement.HasAttributes)
-            {
-                var xAttribute = xElement.Attribute(attributeName);
-                if (null != xAttribute)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
-            }
-
+            if (!xElement.HasAttributes) return false;
+            var xAttribute = xElement.Attribute(attributeName);
+            return null != xAttribute;
         }
+
         #endregion
 
         #region XML节点获取操作
@@ -94,6 +78,7 @@ namespace MT.Core.Document
             }
             return returnElement;
         }
+        
         /// <summary>
         /// 模糊查找：根据名称,获取节点下查找符合条件的子节点集合
         /// </summary>
@@ -111,14 +96,15 @@ namespace MT.Core.Document
             }
             return null;
         }
-        
+
         /// <summary>
         /// 根据节点名称，查找节点下符合条件的子节点信息
         /// </summary>
         /// <param name="xElement">节点</param>
         /// <param name="elementName">节点名称</param>
         /// <returns></returns>
-        public static IEnumerable<XElement> GetElementsByName(XElement xElement, string elementName)=> xElement?.Elements(elementName);
+        public static IEnumerable<XElement> GetElementsByName(XElement xElement, string elementName) => xElement?.Elements(elementName);
+        
         /// <summary>
         /// 获取节点的value值
         /// </summary>
@@ -132,6 +118,14 @@ namespace MT.Core.Document
         /// <param name="xAttribute">属性</param>
         /// <returns></returns>
         public static string GetAttributeValue(XAttribute xAttribute) => xAttribute?.Value;
+
+        /// <summary>
+        /// 获取节点下的属性值
+        /// </summary>
+        /// <param name="xElement">节点</param>
+        /// <param name="attributeName">属性名称</param>
+        /// <param name="defaultValue">默认值</param>
+        /// <returns></returns>
         public static string GetAttributeValueByName(XElement xElement, string attributeName, string defaultValue = "")
         {
             string rtnValue = defaultValue;
@@ -140,6 +134,7 @@ namespace MT.Core.Document
             if (xAttribute != null) rtnValue = xAttribute.Value;
             return rtnValue;
         }
+
         /// <summary>
         /// 获取XML节点的单独子节点的取值
         /// </summary>
