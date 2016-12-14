@@ -152,14 +152,30 @@ namespace MT.Core.Document
             }
             return rtnValue;
         }
+
         /// <summary>
-        /// 获取子节点的信息 P>C>L
+        /// 获取子节点的信息 Current节点>P>C>L
         /// </summary>
-        /// <param name="items"></param>
+        /// <param name="xElement">Current节点</param>
+        /// <param name="items">子节点信息</param>
         /// <returns></returns>
-        public static string GetElementValueBySingleChildName(params string[] items)
+        public static string GetElementValueBySingleChildName(XElement xElement, params string[] items)
         {
-            return "";
+            string result = "";
+            XElement resultXElement = xElement;
+            foreach (string item in items)
+            {
+                resultXElement = GetElementBySingleName(resultXElement, item);
+                if (null == resultXElement)
+                {
+                    continue;
+                }
+            }
+            if (null != resultXElement)
+            {
+                result= resultXElement.Value;
+            }
+            return result;
         }
         #endregion
     }
