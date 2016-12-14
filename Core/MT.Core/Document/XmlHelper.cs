@@ -78,7 +78,7 @@ namespace MT.Core.Document
             }
             return returnElement;
         }
-        
+
         /// <summary>
         /// 模糊查找：根据名称,获取节点下查找符合条件的子节点集合
         /// </summary>
@@ -104,7 +104,7 @@ namespace MT.Core.Document
         /// <param name="elementName">节点名称</param>
         /// <returns></returns>
         public static IEnumerable<XElement> GetElementsByName(XElement xElement, string elementName) => xElement?.Elements(elementName);
-        
+
         /// <summary>
         /// 获取节点的value值
         /// </summary>
@@ -151,6 +151,15 @@ namespace MT.Core.Document
                 rtnValue = singleElement.Value;
             }
             return rtnValue;
+        }
+        /// <summary>
+        /// 获取子节点的信息 P>C>L
+        /// </summary>
+        /// <param name="items"></param>
+        /// <returns></returns>
+        public static string GetElementValueBySingleChildName(params string[] items)
+        {
+            return "";
         }
         #endregion
     }
