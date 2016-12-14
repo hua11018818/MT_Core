@@ -36,6 +36,5 @@ E:\Work\NET\MVC\Project\MT_Core\Core\Web\bin\Newtonsoft.Json.xml
 E:\Work\NET\MVC\Project\MT_Core\Core\Web\bin\System.Net.Http.Formatting.xml
 E:\Work\NET\MVC\Project\MT_Core\Core\Web\bin\System.Web.Http.xml
 E:\Work\NET\MVC\Project\MT_Core\Core\Web\bin\System.Web.Http.WebHost.xml
-E:\Work\NET\MVC\Project\MT_Core\Core\Web\obj\Debug\Web.csprojResolveAssemblyReference.cache
 E:\Work\NET\MVC\Project\MT_Core\Core\Web\obj\Debug\Web.dll
 E:\Work\NET\MVC\Project\MT_Core\Core\Web\obj\Debug\Web.pdb
