@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace MT.Core.Document
 {
@@ -28,5 +29,24 @@ namespace MT.Core.Document
     /// </summary>
     public class JsonHelper
     {
+        /// <summary>
+        /// 将对象序列号为JSON字符串
+        /// </summary>
+        /// <param name="obj">对象</param>
+        /// <returns>JSON字符串</returns>
+        public static string SerializeObject(object obj)
+        {
+            return JsonConvert.SerializeObject(obj);
+        }
+        /// <summary>
+        /// 将字符串反射为对象
+        /// </summary>
+        /// <typeparam name="T">对象</typeparam>
+        /// <param name="jsonStr">JSON字符串</param>
+        /// <returns>对象实例</returns>
+        public static T DeserializeObject<T>(string jsonStr)
+        {
+            return JsonConvert.DeserializeObject<T>(jsonStr);
+        }
     }
 }
